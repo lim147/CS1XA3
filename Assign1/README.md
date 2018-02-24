@@ -20,8 +20,7 @@ git diff : showing the differences of the working directory with the index.
 git diff --staged :showing the differences of the staging index and the remote repo.This command will tell you the git added but not commited yet changes.
 
 
-#3.grep -r "#TODO" . :grepping each line with "#TUDO" tag from the files of current directory and subdirectories
-   > todo.log : directing the results in the todo.log
+#3."grep -r "#TODO" --exclude todo.log ." is for grepping each line with "#TUDO" tag from the files(exclusing todo.log itself) of current directory and subdirectories; "> todo.log" is for directing the results in the todo.log.
 
 #4. At the beginning of this part, I put "shopt -s nullglob" for using glob pattern properly. In the main part, I use a while loop piping with the find command for finding all haskell files in the current directory as well as the subdirectory and iterating those files to direct syntax errors into error.log.
 
