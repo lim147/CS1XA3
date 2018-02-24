@@ -23,7 +23,5 @@ git diff --staged :showing the differences of the staging index and the remote r
 #3.grep -r "#TODO" . :grepping each line with "#TUDO" tag from the files of current directory and subdirectories
    > todo.log : directing the results in the todo.log
 
-#4. At the beginning of this part, I put "shopt -s nullglob" for using glob pattern properly. In the main part, I use a for loop to iterate all of the haskell files and direct the stderr of syntax in error.log.
-
-
+#4. At the beginning of this part, I put "shopt -s nullglob" for using glob pattern properly. In the main part, I use a while loop piping with the find command for finding all haskell files in the current directory as well as the subdirectory and iterating those files to direct syntax errors into error.log.
 
