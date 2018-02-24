@@ -22,7 +22,9 @@ grep -r "#TODO" . > todo.log
 #4.Check all haskell files for syntax errors and puts the results into error.log
 shopt -s nullglob
 
-for f in *.hs
-do
-    ghc -fno-code $f 2>> error.log
-done
+find . -name "*.hs" | 
+     while read f 
+     do
+         ghc -fno-code $f 2>> error.log
+     done
+
