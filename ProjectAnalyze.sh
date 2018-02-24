@@ -17,7 +17,7 @@ git diff  > changes.log         #method 2
 
 
 #3.Put each line from every file of your project with the tag #TODO into a file todo.log
-grep -r "#TODO" . > todo.log
+grep -r "#TODO" --exclude todo.log . > todo.log
 
 #4.Check all haskell files for syntax errors and puts the results into error.log
 shopt -s nullglob
