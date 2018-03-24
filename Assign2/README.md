@@ -7,9 +7,7 @@
   Assignment02 folder include 4 files:
   <ul>
     <li>My_cv.elm: contains the code of my CV webpage
-    <li>My_cv.html: html file derived from My_cv.elm
     <li>Web_app.elm: contains the code of my web app
-    <li>Web_app.html: html file derived from Web_app.elm
   </ul>
 </P>
 
@@ -30,6 +28,6 @@ See my CV webpage here:
       <li>click the <i>faster</i> or <i>lower</i> button to adjust it
    </ol>
   
-   The link of the page is under "PROJECT" category of my CV webpage, prompt with "Web APP" text, or you could open it here:
+   The link of the page is under "PROJECT" category of my CV webpage, prompted with "Web APP" text, or you could open it here:
    <a href="http://ugweb.cas.mcmaster.ca/~lim147/web_app.html" target="_blank">http://ugweb.cas.mcmaster.ca/~lim147/web_app.html</a>
 </p>
