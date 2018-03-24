@@ -4,7 +4,7 @@
 <p>
 <h3>Overwiew</h3>
   
-  Assignment02 folder include 4 files:
+  Assignment02 folder contains 2 files:
   <ul>
     <li>My_cv.elm: contains the code of my CV webpage
     <li>Web_app.elm: contains the code of my web app
