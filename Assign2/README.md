@@ -6,8 +6,8 @@
   
   Assignment02 folder contains 2 files:
   <ul>
-    <li>My_cv.elm: contains the code of my CV webpage
-    <li>Web_app.elm: contains the code of my web app
+    <li>My_CV.elm: contains the code of my CV webpage
+    <li>Web_App.elm: contains the code of my web app
   </ul>
 </P>
 
