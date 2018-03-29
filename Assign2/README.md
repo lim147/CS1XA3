@@ -1,31 +1,24 @@
-<h1>
-  <center>Documentation for Assignment2<center>
-</h1>
-<p>
-<h3>Overwiew</h3>
+ # Documentation for Assignment2
+ ----------------------------------------------
+## Overwiew
   
   Assignment02 folder contains 2 files:
-  <ul>
-    <li>My_CV.elm: contains the code of my CV webpage
-    <li>Flappy_Circle.elm: contains the code of my web app
-  </ul>
-</P>
+  
+  - My_CV.elm: contains the code of my CV webpage
+  - Flappy_Circle.elm: contains the code of my web app
+  
+## CV webpage
+   
+See my CV webpage [here](http://ugweb.cas.mcmaster.ca/~lim147)
 
-<p>
-   <h3>CV webpage</h3>
-   Basically,my webpage has 2 main parts seperated by a border.The left part contains a name logo, my presional information as well as the image links (click images to know more about me :p) to my linkedin and github accounts. The right part lists out my education, experience, projects, etc.
-
-<br>
-See my CV webpage 
- <a href="http://ugweb.cas.mcmaster.ca/~lim147" target="_blank">here</a>
-</P>
-
-<p>
-   <h3>Web App</h3>
+## Web App
    Flappy Circle is a funny game just same as Falppy Bird, but our character is a circle now :)!
-   <br>
-   Since this is no longer a phone game, tap is not available, but you could control your circle with the spacebar.
-   <br>
-   The link of the page is under "PROJECT" category of my CV webpage, prompted with "Web APP" text, or you could open it 
-   <a href="http://ugweb.cas.mcmaster.ca/~lim147/web_app.html" target="_blank">here</a>
-</p>
+ 
+    - Since this is no longer a phone game, tap is not available, but you could control your circle with the spacebar.
+
+    - The link of the page is under "PROJECT" category of my CV webpage, prompted with "Web APP" text, or you could open it [here](http://ugweb.cas.mcmaster.ca/~lim147/web_app.html)
+    
+  Reference:
+   - [Youtube](https://www.youtube.com/watch?v=cXgA1d_E-jY)
+   - [Github](https://github.com/doublebind/Flappy-Bird/blob/master/Flappy%20Bird)
+   
