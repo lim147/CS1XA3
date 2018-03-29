@@ -7,7 +7,7 @@
   Assignment02 folder contains 2 files:
   <ul>
     <li>My_CV.elm: contains the code of my CV webpage
-    <li>Web_App.elm: contains the code of my web app
+    <li>Flappy_Circle.elm: contains the code of my web app
   </ul>
 </P>
 
@@ -22,12 +22,8 @@ See my CV webpage here:
 
 <p>
    <h3>Web App</h3>
-   It's a simple animation using the knowledge of the Elm architecture functionality. The main part is a little red circle moving along a "flower" shaped path (path equation is<i> r=1+3*sin(2*θ)^2</i>). The speed of the movement can be changed in 2 ways:
-   <ol>
-      <li>click anywhere on the screen to make it faster
-      <li>click the <i>faster</i> or <i>lower</i> button to adjust it
-   </ol>
-  
+   Flappy Circle is a funny game just same as Falppy Bird, but our character is a circle now :)!
+   Since this is no longer a phone game, tap is not available, but you could control your circle with the spacebar.
    The link of the page is under "PROJECT" category of my CV webpage, prompted with "Web APP" text, or you could open it here:
    <a href="http://ugweb.cas.mcmaster.ca/~lim147/web_app.html" target="_blank">http://ugweb.cas.mcmaster.ca/~lim147/web_app.html</a>
 </p>
