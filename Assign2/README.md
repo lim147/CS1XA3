@@ -24,6 +24,7 @@ See my CV webpage here:
    <h3>Web App</h3>
    Flappy Circle is a funny game just same as Falppy Bird, but our character is a circle now :)!
    Since this is no longer a phone game, tap is not available, but you could control your circle with the spacebar.
+   <br>
    The link of the page is under "PROJECT" category of my CV webpage, prompted with "Web APP" text, or you could open it here:
    <a href="http://ugweb.cas.mcmaster.ca/~lim147/web_app.html" target="_blank">http://ugweb.cas.mcmaster.ca/~lim147/web_app.html</a>
 </p>
