@@ -16,8 +16,8 @@
    Basically,my webpage has 2 main parts seperated by a border.The left part contains a name logo, my presional information as well as the image links (click images to know more about me :p) to my linkedin and github accounts. The right part lists out my education, experience, projects, etc.
 
 <br>
-See my CV webpage here:
- <a href="http://ugweb.cas.mcmaster.ca/~lim147" target="_blank">http://ugweb.cas.mcmaster.ca/~lim147</a>
+See my CV webpage 
+ <a href="http://ugweb.cas.mcmaster.ca/~lim147" target="_blank">here</a>
 </P>
 
 <p>
