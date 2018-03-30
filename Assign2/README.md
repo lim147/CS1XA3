@@ -19,7 +19,7 @@ References:
  
    - Since this is no longer a phone game, tap is not available, but you could control your circle with the spacebar.
 
-   - The link of the page is under "PROJECT" category of my CV webpage, or you could open it [here](http://ugweb.cas.mcmaster.ca/~lim147/web_app.html)
+   - The link of the page is under "PROJECT" category of my CV webpage, or you could open it [here](http://ugweb.cas.mcmaster.ca/~lim147/flappy_circle.html)
     
   References:
    - [Youtube](https://www.youtube.com/watch?v=cXgA1d_E-jY)
