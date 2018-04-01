@@ -4,11 +4,11 @@
   
   Assignment02 folder contains 2 files:
   
-  - My_CV.elm: contains the resource code of my CV webpage
-  - Flappy_Circle.elm: contains the resource code of my web app
+  - My_CV.elm: contains the code of my CV webpage
+  - Flappy_Circle.elm: contains the code of my web app
   
 ## CV webpage
-   
+The CV webpage is completely developed under elm, using CSS and HTML knowledge.
 See my CV webpage [here](http://ugweb.cas.mcmaster.ca/~lim147)
 
 References:
