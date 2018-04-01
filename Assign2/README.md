@@ -8,8 +8,9 @@
   - Flappy_Circle.elm: contains the code of my web app
   
 ## CV webpage
- - The CV webpage is completely developed under elm, using CSS and HTML knowledge.
- - See my CV webpage [here](http://ugweb.cas.mcmaster.ca/~lim147)
+   The CV webpage is completely developed under elm, using CSS and HTML knowledge.
+   
+   See my CV webpage [here](http://ugweb.cas.mcmaster.ca/~lim147)
 
 References:
  - [Resume-Now](https://www.resume-now.com/lp/winning-job-search-formula.aspx?utm_source=google&utm_medium=sem&utm_campaign=146509051&utm_term=resume%20now&network=g&device=c&adposition=1t1&adgroupid=7039896811)
