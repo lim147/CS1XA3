@@ -204,7 +204,7 @@ To see the specific properties of quickCheck, check the file `quickCheck.txt`.
 
 
  ## References
- - [Abstract Nonsense](https://nodejs.org/) by Benjamin Kovach
+ - [Abstract Nonsense](http://5outh.blogspot.ca/2013/05/symbolic-calculus-in-haskell.html) by Benjamin Kovach
  - [Symbolic Algebra](https://github.com/mrkgnao/pebble) by Soham Chowdhury
  - [Algo](https://github.com/neu-rah/algo) by Rui Azevedo
 
