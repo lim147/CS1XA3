@@ -149,16 +149,17 @@ Note:
 
 
 Language specification for Expr over Vector:
+
 | Type Encoding  | String Representation |
 | ------ | ------  |
-|valV   `[1,2,3,4]`  |     `[1,2,3,4]`  |
-|valV   `[-1,-2,-3,-4]`|  - `[1,2,3,4]` |
+|valV   [1,2,3,4]  |     [1,2,3,4]  |
+|valV   [-1,-2,-3,-4]|  - [1,2,3,4] |
 |varV "x" |     x  |
-|valV `[1,2,3] ?+ valV [4,5,6]` | `[1,2,3] + [4,5,6]` |
-|varV `"x" ?+ valV [-1,-2,-3,-4]`| `x - [1,2,3,4]` |
-|valV `[1,2,3] ?* varV [4,5,6]` | `[1,2,3] * [4,5,6]` |
-| valV `[1,2,3] ?* varV "x"` | `[1,2,3] * x` |
-|sineV `(valV [1,2,3])` | `sin [1,2,3]`|
+|valV [1,2,3] ?+ valV [4,5,6] | [1,2,3] + [4,5,6] |
+|varV "x" ?+ valV [-1,-2,-3,-4]| x - [1,2,3,4] |
+|valV [1,2,3] ?* varV [4,5,6] | [1,2,3] * [4,5,6] |
+| valV [1,2,3] ?* varV "x" | [1,2,3] * x |
+|sineV (valV [1,2,3]) | sin [1,2,3]|
 |cosiV (varV "x") |  cos x |
 |lnV (varV "x") | ln x|
 |error  |     ... ^ ... |
