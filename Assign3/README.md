@@ -107,9 +107,9 @@ The type class `VectorSpace` has:
 
 As for vector culculations:
 1. The vevtors adding/multiplying together should be in the some size, or will return an error.
-2. Exponentation will return an error: “Exp expr a” is not available in Vector, cuz a vector exponent does not make any sense.
-3. Logarithm will return an error: “Log a expr” is not available in Vector, cuz a vector base does not make any sense.
-4. Unary operation, sin, cos, ln, over vector [v1, v2, v3, …] equals to [op v1, op v2, op v3, …]
+2. Exponentation will return an error: `Exp expr a` is not available in Vector, cuz a vector exponent does not make any sense.
+3. Logarithm will return an error: `Log a expr` is not available in Vector, cuz a vector base does not make any sense.
+4. Unary operation, sin, cos, ln, over vector `[v1, v2, v3, …]` equals to `[op v1, op v2, op v3, …]`
 
 
 Hint:
@@ -150,25 +150,25 @@ Note:
 
 Language specification for Expr over Vector:
 | Type Encoding  | String Representation |
-| ------ | ------ |
-|valV   [1,2,3,4] |     [1,2,3,4] |
-|valV   [-1,-2,-3,-4]|  - [1,2,3,4]|
+| ------ | ------  |
+|valV   `[1,2,3,4]`  |     `[1,2,3,4]`  |
+|valV   `[-1,-2,-3,-4]`|  - `[1,2,3,4]` |
 |varV "x" |     x  |
-|valV [1,2,3] ?+ valV [4,5,6] | [1,2,3] + [4,5,6] |
-|varV "x" ?+ valV [-1,-2,-3,-4]| x - [1,2,3,4]|
-|valV [1,2,3] ?* varV [4,5,6]| [1,2,3] * [4,5,6]|
-| valV [1,2,3] ?* varV "x" | [1,2,3] * x |
-|sineV (valV [1,2,3]) | sin [1,2,3]|
+|valV `[1,2,3] ?+ valV [4,5,6]` | `[1,2,3] + [4,5,6]` |
+|varV `"x" ?+ valV [-1,-2,-3,-4]`| `x - [1,2,3,4]` |
+|valV `[1,2,3] ?* varV [4,5,6]` | `[1,2,3] * [4,5,6]` |
+| valV `[1,2,3] ?* varV "x"` | `[1,2,3] * x` |
+|sineV `(valV [1,2,3])` | `sin [1,2,3]`|
 |cosiV (varV "x") |  cos x |
 |lnV (varV "x") | ln x|
 |error  |     ... ^ ... |
 |error  |     log ...| 
-| error |     ... / ... |
+|error |     ... / ... |
 
 Note:
-1. parse negative vector "- [v1, v2,...] " as "[-v1, -v2, ...]"
-2. parse minus operation "expr - [v1, v2,...]" as "expr + [-v1,-v2,...]"
-2. try parsing "/" will return an error, cuz division is not available in Vector 
+1. parse negative vector `- [v1, v2,...]` as `[-v1, -v2, ...]`
+2. parse minus operation `expr - [v1, v2,...]` as `expr + [-v1,-v2,...]`
+2. try parsing `/` will return an error, cuz division is not available in Vector 
 
 
 ## ExprPretty
