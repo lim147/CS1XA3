@@ -2,9 +2,11 @@
 
 
 ## Overview
-This assignment builds a math library in Haskell, which is composed of 6 modules providing different functionality for calculation:
+This assignment builds a math library in Haskell, which is composed of 7 modules providing different functionality for calculation:
 
 - ExprType  -- contains an expression data type that can encode addition, multiplication, exponentation, logarithm, trigonometry (sin, cos), variables and constants.
+
+- UniverNumType -- contains a type class and instances for universal calculating operations.
 
 - ExprDiff  -- contains a type class and instances for differentiable expression, and could conduct evaluation, simplification, partial differentation over these expressions.
 
