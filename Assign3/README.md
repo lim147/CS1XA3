@@ -44,6 +44,25 @@ The `getVars` finction could retrive variable identifiers from an expession and 
 ```
 
 
+
+## UniverNumType
+
+This module conatins a type class `UniversalNum` and instances for universal operations available for all Num type.
+
+The type class `UniversalNum` has methods:
+ - `universalSin` -- do sin on all Num type numbers i.e both Floating and Integral
+ - `universalCos` -- do cos on all Num type numbers
+ - `universalLn` --  do narural log on all Num
+ - `universalExp` -- do exponentiation on all Num
+ - `universalLog` -- do logarithm of the arbitary numaricl base on all Num
+ - `universalLogDiffCoe` -- find the coefficient part of the derivatice of log a e, i.e 1/ln a. It's a helper for the `partDiff` function defined in other module in the case of  `partDiff x (Log c e)`.
+
+
+This module works as a helper for module `ExprDiff` and `ExprVector` to simplify their instance defination.
+
+
+
+
 ## ExprDiff
 
 The module contains a type class `DiffExpr` and instances for differentiable expressions. 
@@ -82,6 +101,8 @@ For specific rules of simplification, check the file `SimpRules.log`
 
 
 
+
+
 ## ExprVector
 
 The module contains a type class `VectorSpace` and instances for vector expressions.
@@ -107,13 +128,13 @@ The type class `VectorSpace` has:
 
 As for vector culculations:
 1. The vevtors adding/multiplying together should be in the some size, or will return an error.
-2. Exponentation will return an error: `Exp expr a` is not available in Vector, cuz a vector exponent does not make any sense.
-3. Logarithm will return an error: `Log a expr` is not available in Vector, cuz a vector base does not make any sense.
-4. Unary operation, sin, cos, ln, over vector `[v1, v2, v3, …]` equals to `[op v1, op v2, op v3, …]`
+2. Exponentation will return an error: “Exp expr a” is not available in Vector, cuz a vector exponent does not make any sense.
+3. Logarithm will return an error: “Log a expr” is not available in Vector, cuz a vector base does not make any sense.
+4. Unary operation, sin, cos, ln, over vector [v1, v2, v3, …] equals to [op v1, op v2, op v3, …]
 
 
 Hint:
-When type vector expression directly in ghci, has to specify its type signature, or will confuse the ghci and cause ambiguous type error:
+When type vector expression directly in ghci, better to specify its type signature especially when only enter a variable, or will confuse the ghci and cause ambiguous type error:
 ```sh
 >>> varV "x" :: Expr [Int]
 var "x"
@@ -149,27 +170,29 @@ Note:
 
 
 Language specification for Expr over Vector:
-
 | Type Encoding  | String Representation |
-| ------ | ------  |
-|valV   [1,2,3,4]  |     [1,2,3,4]  |
-|valV   [-1,-2,-3,-4]|  - [1,2,3,4] |
+| ------ | ------ |
+|valV   [1,2,3,4] |     [1,2,3,4] |
+|valV   [-1,-2,-3,-4]|  - [1,2,3,4]|
 |varV "x" |     x  |
 |valV [1,2,3] ?+ valV [4,5,6] | [1,2,3] + [4,5,6] |
-|varV "x" ?+ valV [-1,-2,-3,-4]| x - [1,2,3,4] |
-|valV [1,2,3] ?* varV [4,5,6] | [1,2,3] * [4,5,6] |
+|varV "x" ?+ valV [-1,-2,-3,-4]| x - [1,2,3,4]|
+|valV [1,2,3] ?* varV [4,5,6]| [1,2,3] * [4,5,6]|
 | valV [1,2,3] ?* varV "x" | [1,2,3] * x |
 |sineV (valV [1,2,3]) | sin [1,2,3]|
 |cosiV (varV "x") |  cos x |
 |lnV (varV "x") | ln x|
 |error  |     ... ^ ... |
 |error  |     log ...| 
-|error |     ... / ... |
+| error |     ... / ... |
 
 Note:
-1. parse negative vector `- [v1, v2,...]` as `[-v1, -v2, ...]`
-2. parse minus operation `expr - [v1, v2,...]` as `expr + [-v1,-v2,...]`
-2. try parsing `/` will return an error, cuz division is not available in Vector 
+1. parse negative vector "- [v1, v2,...] " as "[-v1, -v2, ...]"
+2. parse minus operation "expr - [v1, v2,...]" as "expr + [-v1,-v2,...]"
+2. try parsing "/" will return an error, cuz division is not available in Vector 
+
+
+In this module, there's a helping class `ParserValue` to make parsers identify values of floating type and integral type, and to parse it correctly. This class also generalizes the steps of parsing differentiable expressions insteading of differing them into Double, Float, Int, Integer 4 basic types.
 
 
 ## ExprPretty
@@ -197,6 +220,12 @@ e.g.
 (val [0.84147096,0.9092974,0.14112]) * (var "x")
 ```
 
+Note:
+  When try to parse some expressions, the body part of the advanced functions (exp, log, ln, sin, cos) has to be the simple expressions (expressions only composed of +, *, value, variable), or it could get into an infinite recursive parsing state.
+
+
+
+
 ## ExprTest
 
 The module contains test cases and quickCheck methods over the 5 modules above.
@@ -205,7 +234,9 @@ To see the specific properties of quickCheck, check the file `quickCheck.txt`.
 
 
  ## References
- - [Abstract Nonsense](http://5outh.blogspot.ca/2013/05/symbolic-calculus-in-haskell.html) by Benjamin Kovach
+ - [Allen Chen's work](https://github.com/chenc118/CS1XA3/blob/master/Assign3/ExprDiff.hs) 
+    get the idea from his `ShoeHornFloating` class to make some calculating functions available to all Num type.
+ - [Abstract Nonsense](https://nodejs.org/) by Benjamin Kovach
  - [Symbolic Algebra](https://github.com/mrkgnao/pebble) by Soham Chowdhury
  - [Algo](https://github.com/neu-rah/algo) by Rui Azevedo
 
