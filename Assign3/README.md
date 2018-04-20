@@ -4,19 +4,21 @@
 ## Overview
 This assignment builds a math library in Haskell, which is composed of 7 modules providing different functionality for calculation:
 
-- ExprType  -- contains an expression data type that can encode addition, multiplication, exponentation, logarithm, trigonometry (sin, cos), variables and constants.
+- `ExprType`  
+     - contains an expression data type that can encode addition, multiplication, exponentation, logarithm, trigonometry (sin, cos), variables and constants.
+     - [ExprType doc](https://github.com/lim147/CS1XA3/blob/master/Assign3/docs/ExprType.html)
 
-- UniverNumType -- contains a type class and instances for universal calculating operations.
+- `UniverNumType` -- contains a type class and instances for universal calculating operations.
 
-- ExprDiff  -- contains a type class and instances for differentiable expression, and could conduct evaluation, simplification, partial differentation over these expressions.
+- `ExprDiff`  -- contains a type class and instances for differentiable expression, and could conduct evaluation, simplification, partial differentation over these expressions.
 
-- ExprVector -- contains a type class and instances for vector expressions, and could conduct certain evaluation, simplification over these expressions.
+-` ExprVector` -- contains a type class and instances for vector expressions, and could conduct certain evaluation, simplification over these expressions.
 
-- ExprParser -- contains the parsers to parse a formatted string into an expression. (The format will provided later)
+- `ExprParser` -- contains the parsers to parse a formatted string into an expression. (The format will provided later)
 
-- ExprPretty -- contains the customer Show instance of expressions
+- `ExprPretty` -- contains the customer Show instance of expressions
 
-- ExprTest -- contains the test cases and quickCheck methods of the above 5 module.
+-` ExprTest` -- contains the test cases and quickCheck methods of the above 5 module.
 
 
 ## ExprType
