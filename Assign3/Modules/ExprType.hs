@@ -55,22 +55,6 @@ getVars (Var ident) = [ident]
 
 
 
-{-Test cases:
-  
- - -------------------------------------------------------------------------------------
- - for getVars:
-
-   - getVars (var "x" !+ var "y" !+ val 10) == ["x","y"]
-   
-   - getVars (sine (var "x") !* (var "y") !^ 2) == ["x","y"]
-
-   - getVars (val 2 !^ 2 !+ cosi (var "z")) == ["z"]
-
-
-
-
--}
-
 
 
 
