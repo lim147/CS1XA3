@@ -2,7 +2,7 @@
 
 
 ## Overview
-This assignment builds a math library in Haskell, which is composed of 7 modules providing different functionality for calculation:
+This assignment builds a [math library](https://lim147.github.io/) in Haskell, which is composed of 7 modules providing different functionality for calculation:
 
 - `ExprType` 
      - contains an expression data type that can encode addition, multiplication, exponentation, logarithm, trigonometry (sin, cos), variables and constants.
