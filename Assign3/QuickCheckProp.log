@@ -1,0 +1,25 @@
+Property:
+
+1.Number plus negative itself equals 0
+x + (-x) = 0
+
+2.Check if `eval` works well on adding multiple constants together
+eval (a + b + ...) = sum ([a,b,...])
+
+3.Number times 0 equals 0
+eval (expr * 0) = 0
+
+4.Check if `simplify` could add up all the contents together
+simplify (a + b + ...) = val (sum ([a,b,...]) 
+
+5.Check if `simplify` could reduce an expression after timing 0 to 0
+simplify (expr * 0) = val 0
+
+6.Constant in an expr doesn't matter to the differentiation
+partDiff "x" (x ^ 2 + c) == 2 * x
+
+7.Partial derivative of a non-existing variable of an expr is 0
+partDiff "z" (x ^ 2 + c) == 0
+
+8.Exponentiation property:
+(a ^ b) * (a ^ c) = a ^ (b+c)

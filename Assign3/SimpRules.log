@@ -1,0 +1,126 @@
+
+What you could expect `simplify` could do:
+- remove 0 item
+- 0 times anything becomes 0
+- something times 1 still returns the same
+- always move the constant to the left-most
+- can add up all constants together in the expression no matter the order, and move the addition to the left-most.
+- can identify constants multiplied, and return the multiplication.
+- do distribution law, commutative law 
+- can sort the variables in the alphabetical order (only for 2)
+
+
+Note:
+expr, e -- expressions
+a, b, c  -- constants
+x, y, z  -- variable identifiers
+
+
+
+Rules to simplify addition:
+
+0 + expr = expr
+
+expr + 0 = expr
+
+a + b = (a + b)
+
+y + x = x + y
+
+x + a = a + x
+
+a+(b+expr) = (a+b)+expr
+
+(a+expr)+b = (a+b)+expr
+
+(a+expr1)+expr2 = a+(expr1+expr2)
+
+expr + a = a + expr
+
+x + x = 2*x
+
+y + x = x + y
+
+e + e = 2*e
+
+
+Rules to simplify multiplication:
+
+0 * expr = 0
+
+expr * 0 = 0
+
+a * b = (a*b)
+
+1 * expr = expr
+
+expr * 1 = expr
+
+a*(b*expr) = (a*b)*expr
+
+a*(expr*b) = (a*b)*expr
+
+(a*expr)*b = (a*b)*expr
+
+expr * a = a * expr
+
+expr*(a*b) = (a*b)*expr
+
+
+
+
+
+
+Rules to simplify add & must combination:
+
+a * (e1 + e2) = a*e1+a*e2
+
+x + a*x = (a+1) * x
+
+a*x + x = (a+1) * x
+
+a*x+b*x = (a+b)*x
+
+
+
+
+Rules to simplify exponentation:
+
+a ^ c = (a ^ c)
+
+e^a * e^b = e^(a+b) 
+
+e * e ^ -1 = 1
+
+
+
+
+Rules to simplify Logarithm:
+
+log c a = Const (log c a)
+
+log c (e1*e2) = log c e1 + log c e2
+
+
+
+
+Rules to simplify unary sin, cos, ln:
+
+sin a = Const (sin a)
+
+cos a = Const (cos a)
+
+ln a  = Const (ln a)
+
+
+
+Rules to simplify variable identifier:
+
+If we could find the corresponding value in the given dictionary, then substitute it with the identifier, else return the identifier.
+
+
+
+
+
+
+

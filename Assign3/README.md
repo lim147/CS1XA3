@@ -2,9 +2,11 @@
 
 
 ## Overview
-This assignment builds a math library in Haskell, which is composed of 6 modules providing different functionality for calculation:
+This assignment builds a math library in Haskell, which is composed of 7 modules providing different functionality for calculation:
 
 - ExprType  -- contains an expression data type that can encode addition, multiplication, exponentation, logarithm, trigonometry (sin, cos), variables and constants.
+
+- UniverNumType -- contains a type class and instances for universal calculating operations.
 
 - ExprDiff  -- contains a type class and instances for differentiable expression, and could conduct evaluation, simplification, partial differentation over these expressions.
 
@@ -22,6 +24,7 @@ This assignment builds a math library in Haskell, which is composed of 6 modules
 The module contains a data type `Expe a` for Numerical expression and a function `getVars` to retrive variable identifiers from an expression.
 
 The data type `Exp a` has constructors to encode:
+
 1. binary addition and multiplication 
 2. exponentation, with expression as base and number as exponent, e.g. (x+1)^2 could be expressed as:
 ```sh
@@ -50,6 +53,7 @@ The `getVars` finction could retrive variable identifiers from an expession and 
 This module conatins a type class `UniversalNum` and instances for universal operations available for all Num type.
 
 The type class `UniversalNum` has methods:
+
  - `universalSin` -- do sin on all Num type numbers i.e both Floating and Integral
  - `universalCos` -- do cos on all Num type numbers
  - `universalLn` --  do narural log on all Num
@@ -75,6 +79,7 @@ The type class `DiffExpr` has :
    
 
 - methods coming along with the class type, which are given by default:
+
    - `simplify` -- simplify the expression recursively based on the given `simp` rules untill it can't be reduced anymore
    - `!+` -- binary addition, takes 2 expressions, encodes addtion and simplification together,  and returns the resulting expr.
    - `!*` -- binary multiplaction, takes 2 expressions, encodes multiplation and simplification together, and returns the resulting expr.
@@ -110,13 +115,15 @@ The module contains a type class `VectorSpace` and instances for vector expressi
 The vectors are represented as a LIST of numbers, and the types of numbers include Double, Float, Int, Integer.
 
 The type class `VectorSpace` has:
+
 - methods which need to be defined in instances:
     - `evalV` -- evaluation for vector expr
     - `simpV` -- first step simplification for vector expr
+    
 - methods by default:
    - `simplifyV` -- eventual simplification
    - `?+` -- binary addition & simplification
-   - `?*` -- binary dot production & simplifation
+   - `?*` -- binary production & simplifation
    - `?^` -- exponentiation & simplification
    - `logaV` -- logarithm of arbitory base & simplification
    - `sineV` -- unary sin & simplification
@@ -163,6 +170,7 @@ Language specification for Expr over Number:
 | ln (var "x")  |   ln x |
 | val 3 !* ((var "x") ^ -1.0) |     3/x   | 
 
+
 Note: 
 1. parse the minus as (-1) * expr; 
 2. parse the division as expr ^ (-1)
@@ -170,6 +178,7 @@ Note:
 
 
 Language specification for Expr over Vector:
+
 | Type Encoding  | String Representation |
 | ------ | ------ |
 |valV   [1,2,3,4] |     [1,2,3,4] |
@@ -221,29 +230,31 @@ e.g.
 ```
 
 Note:
-  When try to parse some expressions, the body part of the advanced functions (exp, log, ln, sin, cos) has to be the simple expressions (expressions only composed of +, *, value, variable), or it could get into an infinite recursive parsing state.
+
+When try to parse some expressions, the body part of the advanced functions (exp, log, ln, sin, cos) has to be the simple expressions (expressions only composed of +, *, value, variable), or it could get into an infinite recursive parsing state.
 
 
 
 
 ## ExprTest
 
-The module contains test cases and quickCheck methods over the 5 modules above.
+The module contains test cases and quickCheck methods over the functions defined in `ExprDiff` and `ExprVector` modules.
 
-To see the specific properties of quickCheck, check the file `quickCheck.txt`.
+To see the specific properties of quickCheck, check the file `QuickCheckProp.log`.
 
 
  ## References
  - [Allen Chen's work](https://github.com/chenc118/CS1XA3/blob/master/Assign3/ExprDiff.hs) 
+ 
     get the idea from his `ShoeHornFloating` class to make some calculating functions available to all Num type.
+    
  - [Abstract Nonsense](https://nodejs.org/) by Benjamin Kovach
  - [Symbolic Algebra](https://github.com/mrkgnao/pebble) by Soham Chowdhury
  - [Algo](https://github.com/neu-rah/algo) by Rui Azevedo
 
 
 
-###### Copyright Meijing Li @ 2018
-
+##### Copyright Meijing Li @ 2018
 
 
 

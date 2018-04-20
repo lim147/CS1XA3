@@ -1,0 +1,27 @@
+Partial differentiation rules:
+
+d(e1 + e2)/dx = d(e1)/dx + d(e2)/dx
+
+d(e1 * e2)/dx = d(e1)/dx * e2 + e1 * d(e2)/dx
+
+d(e ^ a)/dx = a * (e1) ^(a-1) * d(e1)/dx
+
+d(log a e)/dx = (1/ln a) * 1/e * d(e)/dx
+
+d(sin e)/dx = (cos e) * d(e)/dx
+
+d(cos e)/dx = (-1) * (sin e) * d(e)/dx
+
+d(ln e)/dx = e ^ (-1) * d(e)/dx
+
+d(a)/dx = 0
+
+d(x)/dx = 1
+
+d(y)/dx = 0
+
+
+Note:
+a, b, c  -- constants
+e        -- expressions
+x,y,z    -- variable identifiers
