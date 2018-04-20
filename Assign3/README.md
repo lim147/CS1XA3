@@ -5,46 +5,32 @@
 This assignment builds a math library in Haskell, which is composed of 7 modules providing different functionality for calculation:
 
 - `ExprType` 
-
      - contains an expression data type that can encode addition, multiplication, exponentation, logarithm, trigonometry (sin, cos), variables and constants.
-     
      - [ExprType doc](https://lim147.github.io/ExprType.html)
 
 - `UniverNumType` 
-
-     - contains a type class and instances for universal calculating operations.
-     
+     - contains a type class and instances for universal calculating operations.     
      - [UniverNumType doc](https://lim147.github.io/UniverNumType.html)
 
 - `ExprDiff`  
-
-     - contains a type class and instances for differentiable expression, and could conduct evaluation, simplification, partial differentation over these expressions.
-     
+     - contains a type class and instances for differentiable expression, and could conduct evaluation, simplification, partial differentation over these expressions.     
      - [ExprDiff doc](https://lim147.github.io/ExprDiff.html)
 
--` ExprVector` 
-
+- `ExprVector` 
      - contains a type class and instances for vector expressions, and could conduct certain evaluation, simplification over these expressions.
-     
      - [ExprVector doc](https://lim147.github.io/ExprVector.html)
 
 - `ExprParser` 
-
-     - contains the parsers to parse a formatted string into an expression. 
-     
+     - contains the parsers to parse a formatted string into an expression.      
      - [ExprParser doc](https://lim147.github.io/ExprParser.html)
      
 
 - `ExprPretty` 
-
-     - contains the customer Show instance of expressions
-     
+     - contains the customer Show instance of expressions     
      - [ExprPretty doc](https://lim147.github.io/ExprPretty.html)
 
--` ExprTest` 
-
-     - contains the test cases and quickCheck methods of the above 5 module.
-     
+- `ExprTest` 
+     - contains the test cases and quickCheck methods of the above 5 module.    
      - [ExprTest doc](https://lim147.github.io/ExprTest.html)
 
 
