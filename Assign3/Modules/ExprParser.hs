@@ -24,8 +24,8 @@ format and parse it into an expression of corresponding type (i.e Int, Float, Do
 
 
 module ExprParser (parserExprD, parserExprF,parserExprI, parserExprIg,parserVectorExprD,parserVectorExprF,parserVectorExprI,parserVectorExprIg) where
---only allow users to access to the final function
---hide info from users
+-- allow users to access only to the final function
+
 
 import ExprType
 import ExprVector
