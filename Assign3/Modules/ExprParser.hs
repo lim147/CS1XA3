@@ -111,28 +111,6 @@ exprD ::Parser (Expr Double)
 exprD = expr
 
 
-{- Test cases:
-	--------------------------------------------------------------------------------------
-	- for exprD:
-		- parse exprD "" "x + (y * 2)" == Right (var "x") + ((val 2.0) * (var "y"))
-
-    - parse exprD "" "x + ((sin x) * (cos x))" == Right (var "x") + ((sin (var "x")) * (cos (var "x")))
-
-	--------------------------------------------------------------------------------------
-	- for parserExprD:
-		- parserExprD "x + (y * 2)" == (var "x") + ((val 2.0) * (var "y"))
-		- parserExprD "x + 0" == var "x"
-		- parserExprD "x + 1 + y + 2 + z + 1" == (val 4.0) + (((var "x") + (var "y")) + (var "z"))
-		- parserExprD "(x+1)^2" == ((val 1.0) + (var "x")) ^ 2.0
-    - parserExprD "(x+1)/2" == (val 0.5) + ((val 0.5) * (var "x"))
-		- parserExprD "1+((x+1)^2)" == (val 1.0) + (((val 1.0) + (var "x")) ^ 2.0)
-    - parserExprD "(ln 10) + 2" == val 4.302585092994046
-    - parserExprD "(log 10 (x + 1)) + (2 * 3)" == (val 6.0) + (log 10.0 ((val 1.0) + (var "x")))
-
-
--}
-
-
 
 
 -- ** Parse to Expr Float
@@ -147,22 +125,15 @@ exprF ::Parser (Expr Float)
 exprF = expr
 
 
-{- Test cases for Expr Float:
------------------------------------------------------------------------------
-	- for parserExprE:
-		- parserExprF "x + 1 + y + 2 + z + 1" == (val 4.0) + (((var "x") + (var "y")) + (var "z"))
-
--}
-
 
 
 
 -- ** Parse to Expr Int
 
-
 -- | Note: 
 --  As longs as meet dot, the parsing stops instead of returning an error, 
---  so please choose  correct parserExpr*      
+--  so please choose  correct parserExpr*   
+
 parserExprI::String  -- ^ takes a string 
               -> Expr Int -- ^ parses it into a Expr of Int
 parserExprI ss = case parse exprI "" ss of
@@ -190,16 +161,6 @@ parserExprIg ss = case parse exprIg "" ss of
 exprIg ::Parser (Expr Integer)
 exprIg = expr
 
-{-Test cases for Expr Integer:
------------------------------------------------------------------------------------------------------------
-	- for parserExprI:
-
-		- parserExprI "x + 1 + y + 2 + z + 1" == (val 4) + (((var "x") + (var "y")) + (var "z"))
-
-		- parserExprI "x + 1 + y + 2 + z + 1.0 + h" == (val 4) + (((var "x") + (var "y")) + (var "z"))
-
--}
-
 
 
 
@@ -210,7 +171,7 @@ exprIg = expr
 
 
 {-simple expression parser is for the expressions after sin, cos, ln, exp-}
---------------------------------------------------------------------------------
+
 --factor, such as x , 1.0
 factor ::(Num a, DiffExpr a, ParseValue a) => Parser (Expr a)
 factor = try negIdentifier <|> identifier <|> constant 
@@ -223,7 +184,7 @@ simpleTerm = (parens simpleExpr) <|> factor
 --simple expr, only contains +, * ops
 simpleExpr :: (Num a, DiffExpr a, ParseValue a) => Parser (Expr a)
 simpleExpr = simpleTerm `chainl1` binaryOp
---------------------------------------------------------------------------------
+
 
 
 
@@ -312,70 +273,11 @@ negIdentifier  = do symbol "-"
                     d <- many1 letter
                     return (Mult (Const (-1)) (var d))
 
-{- Test cases for Expr a:
-   -----------------------------------------------------------------------------------
-    - for constant:
-      - parse constant "" "-12.3" == Right val -12
 
-   ------------------------------------------------------------------------------------
-     - for identifier:
-      - parse identifier "" "xy" == Right var "xy"
-      - parse identifier "" "x" == Right var "x"
-  ------------------------------------------------------------------------------------
-     - for negIdentifier:
-      - parse negIdentifier "" "-y" == Right (val -1) * (var "y")
-      - parse negIdentifier "" "-xy" == Right (val -1) * (var "xy")
-  ------------------------------------------------------------------------------------
-    - for divOp:
-    divOpD::Parser (Expr Double)
-    divOpD = divOp
 
-      - parse divOpD "" "(x + 1)/2" == Right (val 0.5) + ((val 0.5) * (var "x"))
-      - parse divOp "" "x/x" ==  Right val 1
-
-  ------------------------------------------------------------------------------------
-  
-  - for expOp:
-    - parse expOp "" "x ^ 2" == Right (var "x") ^ 2
-
-    - parse expOp "" "(x+1)^2" == Right ((val 1) + (var "x")) ^ 2
-  ------------------------------------------------------------------------------------
-  
-  - for logOp:
-    - parse logOp "" "log 2 3" == Right val 2
-
-    - parse logOpD "" "log 10 (x+1)" == Right log 10 ((val 1) + (var "x"))
-
-  ------------------------------------------------------------------------------------
-  - for unaryOp:
-    - parse unaryOp "" "sin x" == Right sin (var "x")
-
-    - parse unaryOp "" " cos x" == Right cos (var "x")
-
-    - parse unaryOp "" " ln 3" == Right val val 1
-
-    - parse unaryOp "" " ln x" == Right ln (var "x")
-
-  --------------------------------------------------------------------------------------
-  - for factor:
-    - parse factor "" "x" == Right var "x"
-    - parse factor "" "1" == Right val 1
-
-  --------------------------------------------------------------------------------------
-  - for entry:
-    - parse entry "" "sin x" == Right sin (var "x")
-    - parse entry "" "x" == Right var "x"
-    - parse entry "" "x ^ 2" == Right (var "x") ^ 2
-
-  --------------------------------------------------------------------------------------
-  - for term:
-  termD::Parser (Expr Double)
-  termD = term
-
-    - parse termD "" "(x + 1.0)"  == Right (val 1.0) + (var "x")
-    - parse termD "" "sin (x + 1.0)" == Right sin ((val 1.0) + (var "x"))
-
--}
+{- --------------------------------------------------------------------------------------
+ - --------------------------------------------------------------------------------------
+ -}
 
 
 
@@ -392,10 +294,7 @@ negIdentifier  = do symbol "-"
 
 
 
-
-
-
-
+-- Parsers for the vector expressions:
 
 -- ** Parse to Expr [Double]
 parserVectorExprD::String  -- ^ takes a string 
@@ -489,17 +388,6 @@ identifierVD = do d <- many1 letter
 
 
 
-{- Test cases for parserVectorExprD:
-  - parserVectorExprD "x + [1]" == (val [1.0]) + (var "x")
-
-  - parserVectorExprD "(sin [1,2,3]) + [1,2,3]" == val [1.8414709848078965,2.909297426825682,3.1411200080598674]
-
-  - parserVectorExprD "ln [1,2,3]" == val [0.0,0.6931471805599453,1.0986122886681098]
-
-  - parserVectorExprD "(ln [1,2,3]) * sin [1,2,3]" == val [0.0,0.6302769476946344,0.15503617503151282]
-
-
--}
 
 
 
