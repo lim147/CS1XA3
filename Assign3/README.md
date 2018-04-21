@@ -26,7 +26,7 @@ This assignment builds a [math library](https://lim147.github.io/) in Haskell, w
      
 
 - `ExprPretty` 
-     - contains the customer Show instance of expressions     
+     - contains the customizing Show instance of expressions     
      - [ExprPretty doc](https://lim147.github.io/ExprPretty.html)
 
 - `ExprTest` 
