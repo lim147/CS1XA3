@@ -1,3 +1,7 @@
 # CS1XA3
-This is an uncimmited change
+McMaster University CS 1XA3 - Winter 2018 
+Computer Science Practice & Experience: Basic Concepts
+
+
+
 
