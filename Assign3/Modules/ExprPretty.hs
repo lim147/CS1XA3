@@ -1,7 +1,7 @@
 
 {-|
 Module : ExprPretty
-Description : contains the costomer Show instance of expressions
+Description : contains the costomizing Show instance of expressions
 Copyright : Meijing Li @2018
 License : WTFPL  
 Maintainer : lim147@mcmaster.ca
