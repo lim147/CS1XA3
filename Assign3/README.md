@@ -26,7 +26,7 @@ This assignment builds a [math library](https://lim147.github.io/) in Haskell, w
      
 
 - `ExprPretty` 
-     - contains the customer Show instance of expressions     
+     - contains the customizing Show instance of expressions     
      - [ExprPretty doc](https://lim147.github.io/ExprPretty.html)
 
 - `ExprTest` 
@@ -221,7 +221,7 @@ In this module, there's a helping class `ParserValue` to make parsers identify v
 
 ## ExprPretty
 
-The module contains the customer Show instance of expression data type and provides a nicely printing-out form to expressions:
+The module contains the customizing Show instance of expression data type and provides a nicely printing-out form to expressions:
 
 - bracket the items of each step of operations
 - make constructor `Add` printing-out form as `+`
