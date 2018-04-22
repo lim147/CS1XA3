@@ -120,6 +120,12 @@ As for `simplify` method, what you could expect it to do:
 For specific rules of simplification, check the file `SimpRules.log`
 
 
+Note for expressions:
+
+Because of the class methods defination, `simplify` works the same time while expressions are being written. 
+So please use the brackets when you want to calculate some items together, or it would probably mess up the order.
+
+
 
 
 
@@ -162,6 +168,11 @@ When type vector expression directly in ghci, better to specify its type signatu
 var "x"
 ```
 
+Same notice for expressions:
+
+Because of the class methods defination, `simplifyV` works the same time while expressions are being written. 
+So please use the brackets when you want to calculate some items together, or it would probably mess up the order.
+
 
 
 ## ExprParser
@@ -183,7 +194,7 @@ Language specification for Expr over Number:
 | sine (val 1) | sin 1 |
 | cosi (var "x")   |cos x|
 | ln (var "x")  |   ln x |
-| val 3 !* ((var "x") ^ -1.0) |     3/x   | 
+| val 3 !* ((var "x") !^ -1.0) |     3/x   | 
 
 
 Note: 
