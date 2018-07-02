@@ -17,9 +17,9 @@ References:
  - [W3Schools](https://www.w3schools.com/colors/default.asp)
 
 ## Web App
-   Flappy Circle is a funny game just same as Falppy Bird, but our character is a circle now :)
+   Flappy Circle is a funny game just same as Falppy Bird, but our main character is a circle now :)
  
-   - Since this is no longer a phone game, tap is not available, but you could control your circle with the spacebar.
+   - Since it's no longer a phone game, tap is not available, but you could control your circle with the spacebar.
 
    - The link of the page is under "PROJECT" category of my CV webpage, or you could open it [here](http://ugweb.cas.mcmaster.ca/~lim147/flappy_circle.html)
     
