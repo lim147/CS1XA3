@@ -2,7 +2,7 @@
 
 ## How it's used:
 
- 1. Informs you if you're local repo is up to date with the remote repo
+ 1. Informs you if your local repo is up to date with the remote repo
  
  2. Puts all uncommited changes in a file changes.log 
  
