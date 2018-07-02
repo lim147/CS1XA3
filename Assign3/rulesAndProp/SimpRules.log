@@ -1,5 +1,5 @@
 
-What you could expect `simplify` could do:
+What you could expect `simplify` does:
 - remove 0 item
 - 0 times anything becomes 0
 - something times 1 still returns the same
