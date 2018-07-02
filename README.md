@@ -5,7 +5,7 @@ Computer Science Practice & Experience: Basic Concepts
 
 Instructor: Curtis D'Alves
 
-Course outline [here](http://www.cas.mcmaster.ca/~dalvescb/)
+[Course outline](http://www.cas.mcmaster.ca/~dalvescb/)
 
 
 
