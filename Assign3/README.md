@@ -3,6 +3,7 @@
 
 ## Overview
 This assignment builds a [math library](https://lim147.github.io/) in Haskell, which is composed of 7 modules providing different functionality for calculation:
+Note: A haddock documentation is generated for this assignment. Check it simply by clinking the hyperlinks in this file.
 
 - `ExprType` 
      - contains an expression data type that can encode addition, multiplication, exponentation, logarithm, trigonometry (sin, cos), variables and constants.
