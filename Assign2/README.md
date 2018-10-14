@@ -2,10 +2,10 @@
  ----------------------------------------------
 ## Overwiew
   
-  Assignment02 folder contains 2 files:
+  Assign2 is a project built by using Elm Architecture, which contains 2 files:
   
-  - My_CV.elm: contains the code of my CV webpage
-  - Flappy_Circle.elm: contains the code of my web app
+  - My_CV.elm: contains the source code of my CV webpage
+  - Flappy_Circle.elm: contains the source code of my web animation
   
 ## CV webpage
    The CV webpage is completely developed under elm, using CSS and HTML knowledge.
