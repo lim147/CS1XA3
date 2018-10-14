@@ -1,6 +1,6 @@
 # The Documentation of ProjectAnalyze.sh
 
-## How it's used:
+A shell script to perform the following functionality:
 
  1. Informs you if your local repo is up to date with the remote repo
  
