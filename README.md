@@ -5,7 +5,11 @@ Computer Science Practice & Experience: Basic Concepts
 
 Instructor: Curtis D'Alves
 
-[Course Outline](http://www.cas.mcmaster.ca/~dalvescb/)
+Topics covered in this [course](http://www.cas.mcmaster.ca/~dalvescb/):
+- Bash scripting
+- Web development with Elm
+- Programming tecniques with Haskell
+  
 
 
 
