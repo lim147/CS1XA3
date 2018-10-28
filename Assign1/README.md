@@ -38,3 +38,4 @@ Basically I use the `git remote show origin` command to track the remote repo. A
 
 At the beginning of this part, I put `shopt -s nullglob` for using glob pattern properly. In the main part, I use a while loop piping with the find command for finding all haskell files in the current directory as well as the subdirectory and iterating those files to direct syntax errors into error.log.
 
+
