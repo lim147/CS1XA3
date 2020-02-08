@@ -2,39 +2,39 @@
 
 
 ## Overview
-This assignment builds a [math library](https://lim147.github.io/) in Haskell, which is composed of 7 modules providing different functionality for calculation:
+This assignment builds a [math library](https://lim147.github.io/docs/index.html) in Haskell, which is composed of 7 modules providing different functionality for calculation:
 
 Note: A haddock documentation is generated for this assignment. Check it simply by clinking the hyperlinks in this file.
 
 
 - `ExprType` 
      - contains an expression data type that can encode addition, multiplication, exponentation, logarithm, trigonometry (sin, cos), variables and constants.
-     - [ExprType doc](https://lim147.github.io/ExprType.html)
+     - [ExprType doc](https://lim147.github.io/docs/ExprType.html)
 
 - `UniverNumType` 
      - contains a type class and instances for universal calculating operations.     
-     - [UniverNumType doc](https://lim147.github.io/UniverNumType.html)
+     - [UniverNumType doc](https://lim147.github.io/docs/UniverNumType.html)
 
 - `ExprDiff`  
      - contains a type class and instances for differentiable expression, and could conduct evaluation, simplification, partial differentation over these expressions.     
-     - [ExprDiff doc](https://lim147.github.io/ExprDiff.html)
+     - [ExprDiff doc](https://lim147.github.io/docs/ExprDiff.html)
 
 - `ExprVector` 
      - contains a type class and instances for vector expressions, and could conduct certain evaluation, simplification over these expressions.
-     - [ExprVector doc](https://lim147.github.io/ExprVector.html)
+     - [ExprVector doc](https://lim147.github.io/docs/ExprVector.html)
 
 - `ExprParser` 
      - contains the parsers to parse a formatted string into an expression.      
-     - [ExprParser doc](https://lim147.github.io/ExprParser.html)
+     - [ExprParser doc](https://lim147.github.io/docs/ExprParser.html)
      
 
 - `ExprPretty` 
      - contains the customizing Show instance of expressions     
-     - [ExprPretty doc](https://lim147.github.io/ExprPretty.html)
+     - [ExprPretty doc](https://lim147.github.io/docs/ExprPretty.html)
 
 - `ExprTest` 
      - contains the test cases and quickCheck methods of the above 5 module.    
-     - [ExprTest doc](https://lim147.github.io/ExprTest.html)
+     - [ExprTest doc](https://lim147.github.io/docs/ExprTest.html)
 
 
 ## ExprType
