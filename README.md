@@ -1,18 +1,3 @@
-# CS1XA3
-McMaster University CS 1XA3 - Winter 2018 
-
-Computer Science Practice & Experience: Basic Concepts
-
-Instructor: Curtis D'Alves
-
-Topics covered in this [course](http://www.cas.mcmaster.ca/~dalvescb/):
-- Bash scripting
-- Web development with Elm
-- Programming tecniques with Haskell
-  
-
-
-
 # Software Requirements Specification
 ## For Mini-Game Battery Project
 
@@ -184,6 +169,7 @@ The purpose of this requirements document is to lay out who the stakeholders of 
 
 ##### Product Use Case (PUC) Table  
 | PUC | PUC Name | Actor(s) | Input/Output |  
+| ---- | ------- | ----------| --------- | 
 | 1 | Choose Game | Player | Key Input(In), Intial Game Data (Out)  |  
 | 2 | Exit Game | Player | Key Input(In) |  
 | 3 | Pause Game | Player | Key Input(In), Game Status(Out) |  
@@ -202,72 +188,84 @@ The purpose of this requirements document is to lay out who the stakeholders of 
 
 ##### Individual Product Use Cases
 | PUC No.1 | Event: Choose Game |  
+| ---- | ------- | 
 | Trigger | Player selects a mini-game from the game menu |  
 | Preconditions | Game status is null or end, and in the main menu |  
 | Procedure | 1.Initialize new game data. 2.Load new game data 3.Game status is switched to active|  
 | Outcome | Player is in a mini-game instance and ready to play |  
 
 | PUC No.2 | Event: Exit Game |  
+| ---- | ------- | 
 | Trigger | Player selects "Exit" option |  
 | Preconditions |Game status is null or end, and in the main menu |
 | Procedure | 1.Display message "Do you really want to exit?". 2.Get input from (1). 3.Close the tab of the web application depending on the input|  
 | Outcome | Player exits the web application |  
 
-| PUC No.3 | Event: Pause Game |  
+| PUC No.3 | Event: Pause Game | 
+| ---- | ------- | 
 | Trigger | Player selects "Pause" option |  
 | Preconditions | Player is in a mini-game, and the game status is active |
 | Procedure | 1.Game is switched into pause status. 2.A Pause menu is displayed |  
 | Outcome | Game is paused and a pause menu is on the screen |  
 
-| PUC No.4 | Event: Resume Game |  
+| PUC No.4 | Event: Resume Game | 
+| ---- | ------- | 
 | Trigger | Player selects "Resume" option from pause menu |  
 | Preconditions | Player is in a mini-game, and the game status is paused |  
 | Procedure | 1.Game is switched into active status. 2.Pause menu is not displayed |    
 | Outcome | Game is resumed and players can play the game |  
 
 | PUC No.5 | Event: End Game |  
+| ---- | ------- | 
 | Trigger | Player selects "End" option from pause menu |  
 | Preconditions | Player is in a mini-game, and the game status is paused |
 | Procedure | 1.Game is switched into finished status. 2.End screen is displayed |   
 | Outcome | Game is terminated and the end screen is on screen |  
 
 | PUC No.6 | Event: Finish Game |  
+| ---- | ------- | 
 | Trigger | Players finish the game |  
 | Preconditions | Player is in a mini-game, and the game status is active |
 | Procedure | 1.Game is switched into "finished" status. 2.End screen is displayed |    
 | Outcome | Game is terminated and the end screen is on screen |  
 
 | PUC No.6 | Event: Check Final Score |  
+| ---- | ------- | 
 | Trigger | The end menu is displayed |  
 | Preconditions | Game status is "finished", and the end menu is displayed |
 | Procedure | 1.The final score will be displayed |    
 | Outcome | The final score of the player is displayed |  
 
 | PUC No.7 | Event: Flip Card | 
+| ---- | ------- | 
 | Trigger | Players press the key for certain card  |  
 | Preconditions | Current game is (), and the game status is active |
 | Procedure | 1.Display the flipped card. 2. Determine if there is another correct card flipped  |    
 | Outcome | Player gets score if the correct card is flipped, otherwise the flipped card will be unflipped |  
 
 | PUC No.8 | Event: Move Character | 
+| ---- | ------- | 
 | Trigger | Player presses the key to move the character  |  
 | Preconditions | Current game is (), and the game status is active |
 | Procedure | 1.Character moves according to the pressed key |    
 | Outcome | Character's position in 2-dimension changed according to the key until the key is released | 
 
 | PUC No.9 | Event: Collect items | 
+| ---- | ------- | 
 | Trigger | Character is under the coins that are falling down  |  
 | Preconditions | Current game is (), and the game status is active |
 | Procedure | 1.The item collected is displayed. 2. Determine if the item is coin or enemy |    
 | Outcome | Player gets score depending on the result | 
 
 | PUC No.10 | Event: Play the Piano | 
+| ---- | ------- | 
 | Trigger | Player presses the key for a certain musical note  |  
 | Preconditions | Current game is (), and the game status is active |
 | Procedure | 1.The sound of the pressed musical note is played. 2.Determine if the musical note is correct |    
 | Outcome | Player gets score depending on the result | 
 
 | PUC No.11 | Event: Click the Item | 
+| ---- | ------- | 
 | Trigger | Player presses the key for certain Item |  
 | Preconditions | Current game is (), and the game status is active |
 | Procedure | 1.Record the time between from the appearance of the item to the click event |    
